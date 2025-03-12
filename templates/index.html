@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentiment Analysis</title>
+  </head>
+  <body>
+    <h1>Sentiment Analysis Web Application</h1>
+    <form method="POST" action="/predict">
+      <label for="text">Enter tweet text:</label><br />
+      <textarea name="text" rows="4" cols="50"></textarea><br /><br />
+      <button type="submit">Predict Sentiment</button>
+    </form>
+
+    {% if text %}
+    <h3>Input Tweet:</h3>
+    <p>{{ text }}</p>
+    <h3>Predicted Sentiment:</h3>
+    <p>{{ sentiment }}</p>
+    {% endif %}
+  </body>
+</html>
